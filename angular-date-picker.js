@@ -12,7 +12,6 @@
 
         root.mp.datePicker = factory(root.angular);
     }
-
 })(this, function(angular) {
     "use strict";
 
@@ -24,17 +23,16 @@
                 "" +
                     '<div class="angular-date-picker">' +
                     '    <div class="_month">' +
-                    '        <button type="button" class="_previous" ng-click="changeMonthBy(-1)">&laquo;</button>' +
+                    '        <button type="button" class="_previous visiotalenticon2-chevron-big-left" ng-click="changeMonthBy(-1)"></button>' +
                     '        <span title="{{ months[month].fullName }}">{{ months[month].shortName }}</span> {{ year }}' +
-                    '        <button type="button" class="_next" ng-click="changeMonthBy(1)">&raquo;</button>' +
+                    '        <button type="button" class="_next visiotalenticon2-chevron-big-right" ng-click="changeMonthBy(1)"></button>' +
                     "    </div>" +
                     '    <div class="_days" ng-click="pickDay($event)">' +
                     '        <div class="_day-of-week" ng-repeat="dayOfWeek in daysOfWeek" title="{{ dayOfWeek.fullName }}">{{ dayOfWeek.firstLetter }}</div>' +
                     '        <div class="_day -padding" ng-repeat="day in leadingDays" data-month-offset="-1">{{ day }}</div>' +
-                    "        <div class=\"_day\" ng-repeat=\"day in days\" ng-class=\"{ '-selected': (day === selectedDay), '-today': (day === today), '-hightlighted': (eventsThisDay(year + " -
-                    " + (month + 1) + " -
-                    ' + day)) }">{{ day }}</div>' +
+                    "        <div class=\"_day\" ng-repeat=\"day in days\" ng-class=\"{ '-selected': (day === selectedDay), '-today': (day === today), '-hightlighted': (eventsThisDay(year + ' -' + (month + 1) + ' -' + day)) }\">{{ day }}</div>" +
                     '        <div class="_day -padding" ng-repeat="day in trailingDays" data-month-offset="1">{{ day }}</div>' +
+                    "" +
                     "    </div>" +
                     "</div>"
             );
