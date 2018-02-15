@@ -12,6 +12,7 @@
 
         root.mp.datePicker = factory(root.angular);
     }
+
 })(this, function(angular) {
     "use strict";
 
